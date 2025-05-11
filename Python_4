@@ -1,0 +1,1 @@
+data.YearMonth.sort_values().unique()[:-1]

@@ -1,0 +1,10 @@
+SELECT
+    inn,
+    contract_id,
+    date_start,
+    contract_amount,
+    contract_amount - lag(contract_amount) OVER (PARTITION BY inn ORDER BY date_start) AS sum_diff
+FROM contracts
+ORDER BY
+    inn,
+    date_start

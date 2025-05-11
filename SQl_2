@@ -1,0 +1,5 @@
+SELECT
+    is_repeated,
+    COUNT(contract_amount) AS cnt_Loans,
+    SUM(contract_amount) AS sum_Loans
+FROM contracts
